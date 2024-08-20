@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(152, 237, 203);
+}
+.title{
+    font-size: x-large;
+    font-weight: 300;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.buttons button
+{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: grey;
+    font-size: x-large;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+.container
+{
+    padding: 20px;
+}
+.box
+{
+    padding: 20px;
+}
+.result
+{
+    padding: 20px;
+    font-size: x-large;
+    font-style: oblique;
+
+}

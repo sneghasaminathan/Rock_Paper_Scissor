@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="title">Rock Paper Scissor</div>
+    </section>
+    <section class="box">
+        <div class="buttons">
+            <button id="rockbutton" onclick="play('rock')">Rock</button>
+            <button id="paperbutton" onclick="play('paper')">Paper</button>
+            <button id="scissorbutton" onclick="play('scissor')">Scissor</button>
+        </div>
+        <div class="result" id="result"></div>
+    </section>
+
+    <script>
+        function play(play_choice)
+        {
+            var choice = ['rock','paper','scissor'];
+            var com_choice = choice[Math.floor(Math.random() *3)];
+            var result = determineWin(play_choice,com_choice);
+            
+            document.getElementById('result').textContent=`Computer choose ${com_choice}. ${result}` ; 
+        }
+        function determineWin(play_choice,com_choice)
+        {
+            if(play_choice === com_choice)
+            {
+                return 'Tie!!'; 
+            }
+            if(
+                (play_choice === 'rock' && com_choice === 'scissor') ||
+                (play_choice === 'paper' && com_choice === 'rock') ||
+                (play_choice === 'scissor' && com_choice === 'paper') 
+            ){
+                return 'You Win!';
+            }
+            else{
+                return 'You lose!';
+            }
+        }
+      </script>
+</body>
+</html>
